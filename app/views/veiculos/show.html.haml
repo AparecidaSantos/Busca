@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Empresa:
+  = @veiculo.empresa.nome
+%p
+  %b Filial:
+  = @veiculo.filial.nome
+%p
+  %b Placa:
+  = @veiculo.placa
+%p
+  %b Ano:
+  = @veiculo.ano
+%p
+  %b Numero:
+  = @veiculo.numero
+%p
+  %b Renavam:
+  = @veiculo.renavam
+
+= link_to 'Edit', edit_veiculo_path(@veiculo)
+\|
+= link_to 'Back', veiculos_path

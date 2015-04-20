@@ -1,0 +1,13 @@
+= simple_form_for(@veiculo) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :empresa, label_method: :nome
+    = f.association :filial, label_method: :nome
+    = f.input :placa
+    = f.input :ano
+    = f.input :numero
+    = f.input :renavam
+
+  .form-actions
+    = f.submit "Salvar"

@@ -1,0 +1,25 @@
+%h1 Listing filiais
+
+%table
+  %tr
+    %th Nome
+    %th Endereco
+    %th Cnpj
+    %th Empresa
+    %th
+    %th
+    %th
+
+  - @filiais.each do |filial|
+    %tr
+      %td= filial.nome
+      %td= filial.endereco
+      %td= filial.cnpj
+      %td= filial.empresa
+      %td= link_to 'Show', filial
+      %td= link_to 'Edit', edit_filial_path(filial)
+      %td= link_to 'Excluir', filial, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Filial', new_filial_path

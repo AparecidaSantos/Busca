@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @filial.nome
+%p
+  %b Endereço:
+  = @filial.endereco
+%p
+  %b Cnpj:
+  = @filial.cnpj
+%p
+  %b Empresa:
+  = @filial.empresa.nome
+
+= link_to 'Edit', edit_filial_path(@filial)
+\|
+= link_to 'Back', filiais_path
