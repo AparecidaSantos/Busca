@@ -14,8 +14,8 @@
 
   - @veiculos.each do |veiculo|
     %tr
-      %td= veiculo.empresa
-      %td= veiculo.filial
+      %td= veiculo.empresa.nome
+      %td= veiculo.filial.nome
       %td= veiculo.placa
       %td= veiculo.ano
       %td= veiculo.numero
